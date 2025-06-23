@@ -15,7 +15,6 @@ const tradingFirms = [
     discountCode: "ERAGON",
     discountValue: "-110% Reward%",
     websiteUrl: "https://fundednext.com/?fpr=johnson81",
-    couponUrl: "https://fundednext.com/coupon",
   },
   {
     name: "Maven Trading",
@@ -26,7 +25,6 @@ const tradingFirms = [
     discountCode: "PROP20",
     discountValue: "-20% Discount",
     websiteUrl: "https://maventrading.com/?ref=bbyface",
-    couponUrl: "https://ftmo.com/coupon",
   },
   {
     name: "Exness",
@@ -37,7 +35,6 @@ const tradingFirms = [
     discountCode: "MFF15",
     discountValue: "-15% Off",
     websiteUrl: "https://one.exnesstrack.org/a/c_hj2fo34gxe",
-    couponUrl: "https://myforexfunds.com/coupon",
   },
   {
     name: "Funderpro",
@@ -48,7 +45,6 @@ const tradingFirms = [
     discountCode: "MFF15",
     discountValue: "-15% Off",
     websiteUrl: "https://funderpro.cxclick.com/visit/?bta=39623&brand=funderpro",
-    couponUrl: "https://myforexfunds.com/coupon",
   },
 ]
 
@@ -61,9 +57,7 @@ function App() {
     <div className="min-h-screen bg-black">
 		<Header />
 
-      {/* Main Content */}
       <main className="py-8">
-        {/* Hero Section */}
         <div className="text-center min-h-screen flex pt-56 items-center flex-col bg-gradient-to-b from-[#162452] via-[#0c1524] to-black">
           <h2 className="text-5xl md:text-8xl font-bold text-white mb-4 lg:mb-8">
 			Find the Best <span className="text-cyan-300">Futures Trading </span>Prop Firms
@@ -74,7 +68,6 @@ function App() {
           </p>
         </div>
 
-        {/* Search Bar */}
         <div className="relative mb-8 lg:mb-12 max-w-4xl mx-auto">
           <input
             type="text"
@@ -116,13 +109,11 @@ function App() {
 					</div>
 				</div>
 
-				{/* Firm Info */}
 				<div className="mb-6">
 					<h4 className="text-white font-bold text-xl mb-2">{firm.name}</h4>
 					<p className="text-gray-400 text-sm">{firm.tagline}</p>
 				</div>
 
-				{/* Stats */}
 				<div className="grid grid-cols-2 gap-4 mb-6">
 					<div>
 					<p className="text-gray-400 text-sm mb-1">Min Deposit</p>
@@ -146,7 +137,6 @@ function App() {
 					</div>
 				</div>
 
-				{/* Action Buttons */}
 				<div className="space-y-3">
 					<a
 					href={firm.websiteUrl}
@@ -162,7 +152,6 @@ function App() {
 			))}
 			</div>
 
-			{/* No Results */}
 			{filteredFirms.length === 0 && (
 			<div className="text-center py-12">
 				<p className="text-gray-400 text-lg">No firms found matching your search.</p>
