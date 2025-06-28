@@ -10,8 +10,6 @@ const tradingFirms = [
 	name: "Oraimo Nigeria",
     tagline: "Oraimo Official Online Store",
     rating: 5.0,
-    minDeposit: 99,
-    profitSplit: 85,
 	discountCode: "FGIJXETZ",
     websiteUrl: "https://ng.oraimo.com?affiliate_code=f1si5kuq",
 	faviconDomain: "oraimo.com"
@@ -121,16 +119,18 @@ function App() {
 					<p className="text-gray-400 text-sm">{firm.tagline}</p>
 				</div>
 
-				<div className="grid grid-cols-2 gap-4 mb-6">
-					<div>
-					<p className="text-gray-400 text-sm mb-1">Min Deposit</p>
-					<p className="text-white font-bold text-lg">${firm.minDeposit}</p>
+				{firm.minDeposit && firm.profitSplit && (
+					<div className="grid grid-cols-2 gap-4 mb-6">
+						<div>
+						<p className="text-gray-400 text-sm mb-1">Min Deposit</p>
+						<p className="text-white font-bold text-lg">${firm.minDeposit}</p>
+						</div>
+						<div>
+						<p className="text-gray-400 text-sm mb-1">Profit Split</p>
+						<p className="text-white font-bold text-lg">{firm.profitSplit}%</p>
+						</div>
 					</div>
-					<div>
-					<p className="text-gray-400 text-sm mb-1">Profit Split</p>
-					<p className="text-white font-bold text-lg">{firm.profitSplit}%</p>
-					</div>
-				</div>
+				)}
 
 				{/* Discount Code */}
 				{firm.discountCode && (
