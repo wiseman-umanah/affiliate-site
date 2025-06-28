@@ -129,18 +129,6 @@ function App() {
 					</div>
 				</div>
 
-				{/* Discount Code */}
-				<div className="bg-slate-700 border border-cyan-500/30 rounded-lg p-4 mb-6">
-					<div className="flex items-center gap-2 mb-2">
-					<div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-					<span className="text-gray-400 text-sm">Discount Code</span>
-					</div>
-					<div className="flex items-center justify-between">
-					<span className="text-cyan-300 font-bold text-lg">{firm.discountCode}</span>
-					<span className="text-cyan-400 text-sm">{firm.discountValue}</span>
-					</div>
-				</div>
-
 				<div className="space-y-3">
 					<a
 					href={firm.websiteUrl}
