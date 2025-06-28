@@ -12,8 +12,6 @@ const tradingFirms = [
     rating: 4.6,
     minDeposit: 59,
     profitSplit: 90,
-    discountCode: "ERAGON",
-    discountValue: "-110% Reward%",
     websiteUrl: "https://fundednext.com/?fpr=johnson81",
 	faviconDomain: "fundednext.com"
   },
@@ -23,8 +21,6 @@ const tradingFirms = [
     rating: 4.8,
     minDeposit: 155,
     profitSplit: 80,
-    discountCode: "PROP20",
-    discountValue: "-20% Discount",
     websiteUrl: "https://maventrading.com/?ref=bbyface",
 	faviconDomain: "maventrading.com"
   },
@@ -34,8 +30,6 @@ const tradingFirms = [
     rating: 4.5,
     minDeposit: 99,
     profitSplit: 85,
-    discountCode: "MFF15",
-    discountValue: "-15% Off",
     websiteUrl: "https://one.exnesstrack.org/a/c_hj2fo34gxe",
 	faviconDomain: "exness.com"
   },
@@ -45,8 +39,6 @@ const tradingFirms = [
     rating: 4.5,
     minDeposit: 99,
     profitSplit: 85,
-    discountCode: "MFF15",
-    discountValue: "-15% Off",
     websiteUrl: "https://funderpro.cxclick.com/visit/?bta=39623&brand=funderpro",
 	faviconDomain: "funderpro.com"
   },
