@@ -7,6 +7,16 @@ import { Header } from "./components/Header"
 
 const tradingFirms = [
   {
+	name: "Oraimo Nigeria",
+    tagline: "Oraimo Official Online Store",
+    rating: 5.0,
+    minDeposit: 99,
+    profitSplit: 85,
+	discountCode: "FGIJXETZ",
+    websiteUrl: "https://ng.oraimo.com?affiliate_code=f1si5kuq",
+	faviconDomain: "oraimo.com"
+  },
+  {
     name: "FundedNext",
     tagline: "Empowering Promising Trader Worldwide",
     rating: 4.6,
@@ -41,7 +51,8 @@ const tradingFirms = [
     profitSplit: 85,
     websiteUrl: "https://funderpro.cxclick.com/visit/?bta=39623&brand=funderpro",
 	faviconDomain: "funderpro.com"
-  },
+  }
+  
 ]
 
 function App() {
@@ -56,18 +67,18 @@ function App() {
       <main className="py-8">
         <div className="text-center min-h-screen flex pt-56 items-center flex-col bg-gradient-to-b from-[#162452] via-[#0c1524] to-black">
           <h2 className="text-5xl md:text-8xl font-bold text-white mb-4 lg:mb-8">
-			Find the Best <span className="text-cyan-300">Futures Trading </span>Prop Firms
+			Find the Best <span className="text-cyan-300">Futures Trading </span>Prop Firms & Oraimo Discount Deals
 			</h2>
           <p className="text-gray-300 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-            Compare the best proprietary trading firms and brokers with exclusive discounts and bonuses available only
-            through our links.
+            Compare top proprietary trading firms with exclusive discounts — and get access to premium Oraimo accessories to power your lifestyle on and off the charts. 
+			All offers available only through our affiliate links.
           </p>
         </div>
 
         <div className="relative mb-8 lg:mb-12 max-w-4xl mx-auto">
           <input
             type="text"
-            placeholder="Search firms or brokers..."
+            placeholder="Search"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-4 pl-12 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
@@ -87,8 +98,8 @@ function App() {
 			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
 			{filteredFirms.map((firm, idx) => (
 				<div
-				key={idx}
-				className="bg-[#2B2E36] border border-slate-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
+					key={idx}
+					className="bg-[#2B2E36] justify-between border border-slate-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 flex flex-col"
 				>
 				{/* Header with Logo and Rating */}
 				<div className="flex items-start justify-between mb-4">
@@ -120,6 +131,23 @@ function App() {
 					<p className="text-white font-bold text-lg">{firm.profitSplit}%</p>
 					</div>
 				</div>
+
+				{/* Discount Code */}
+				{firm.discountCode && (
+					<div className="bg-slate-700 border border-cyan-500/30 rounded-lg p-4 mb-6">
+					<div className="flex items-center gap-2 mb-2">
+					<div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+					<span className="text-gray-400 text-sm">Discount Code</span>
+					</div>
+					<div className="flex items-center justify-between">
+					<span className="text-cyan-300 font-bold text-lg">{firm.discountCode}</span>
+					{/* <span className="text-cyan-400 text-sm">{firm.discountValue}</span> */}
+					</div>
+				</div>
+				)}
+				
+
+
 
 				<div className="space-y-3">
 					<a
