@@ -15,6 +15,7 @@ const tradingFirms = [
     discountCode: "ERAGON",
     discountValue: "-110% Reward%",
     websiteUrl: "https://fundednext.com/?fpr=johnson81",
+	faviconDomain: "fundednext.com"
   },
   {
     name: "Maven Trading",
@@ -25,6 +26,7 @@ const tradingFirms = [
     discountCode: "PROP20",
     discountValue: "-20% Discount",
     websiteUrl: "https://maventrading.com/?ref=bbyface",
+	faviconDomain: "maventrading.com"
   },
   {
     name: "Exness",
@@ -35,6 +37,7 @@ const tradingFirms = [
     discountCode: "MFF15",
     discountValue: "-15% Off",
     websiteUrl: "https://one.exnesstrack.org/a/c_hj2fo34gxe",
+	faviconDomain: "exness.com"
   },
   {
     name: "Funderpro",
@@ -45,6 +48,7 @@ const tradingFirms = [
     discountCode: "MFF15",
     discountValue: "-15% Off",
     websiteUrl: "https://funderpro.cxclick.com/visit/?bta=39623&brand=funderpro",
+	faviconDomain: "funderpro.com"
   },
 ]
 
@@ -98,7 +102,7 @@ function App() {
 				<div className="flex items-start justify-between mb-4">
 					<div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
 					<img
-						src={`https://www.google.com/s2/favicons?domain=${new URL(firm.websiteUrl).hostname}&sz=64`}
+						src={`https://www.google.com/s2/favicons?domain=${firm.faviconDomain}&sz=64`}
 						alt={`${firm.name} logo`}
 						className="w-8 h-8 object-contain"
 					/>

@@ -5,7 +5,7 @@ export function Header() {
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex items-center gap-3">
             <h1 className="text-white font-bold text-xl">
-              Future <span className="text-cyan-300">Trades</span>
+             PropLite Future <span className="text-cyan-300">Trades</span>
             </h1>
           </div>
         </div>
