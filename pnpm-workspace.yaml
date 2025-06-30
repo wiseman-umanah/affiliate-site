@@ -1,3 +1,6 @@
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'
+  - '@tsparticles/engine'
   - esbuild
+  - react-tsparticles
+  - tsparticles-engine

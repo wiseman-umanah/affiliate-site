@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+// import { Link } from "react-router-dom";
+// import { Menu, X } from "lucide-react";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -35,7 +35,7 @@ export function Header() {
         </h1>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-4 text-sm">
+        {/* <nav className="hidden font-bold md:flex gap-4 text-sm">
           <Link
             to="/about"
             className="text-gray-300 hover:text-cyan-400 transition-colors"
@@ -60,20 +60,20 @@ export function Header() {
           >
             Terms of Use
           </Link>
-        </nav>
+        </nav> */}
 
         {/* Mobile Menu Button */}
-        <button
+        {/* <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors"
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        </button> */}
       </div>
 
       {/* Mobile Dropdown */}
-      {mobileMenuOpen && (
+      {/* {mobileMenuOpen && (
         <div
           ref={menuRef}
           className="md:hidden bg-black flex flex-col gap-4 px-4 py-4"
@@ -107,7 +107,7 @@ export function Header() {
             Terms of Use
           </Link>
         </div>
-      )}
+      )} */}
     </header>
   );
 }
