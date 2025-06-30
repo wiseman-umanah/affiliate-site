@@ -35,7 +35,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="flex justify-center animate-fade-in">
+          <div className="w-full animate-fade-in">
             <ParticlesSphereCard />
           </div>
         </section>
