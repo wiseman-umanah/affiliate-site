@@ -43,7 +43,7 @@ export function Header() {
             About Us
           </Link>
           <Link
-            to="/privacy"
+            to="/privacy-policy"
             className="text-gray-300 hover:text-cyan-400 transition-colors"
           >
             Privacy Policy
