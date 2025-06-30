@@ -6,8 +6,6 @@ export default function About() {
   return (
     <main className="bg-gradient-to-b from-black via-[#0c1524] to-black text-white px-6 py-20 min-h-screen">
       <div className="max-w-5xl mx-auto space-y-16">
-
-        {/* Hero Section */}
         <section className="text-center space-y-4 animate-fade-in">
           <h1 className="text-4xl md:text-6xl font-bold">
             Welcome to <span className="text-cyan-400">PropLite</span>
@@ -20,7 +18,6 @@ export default function About() {
           </blockquote>
         </section>
 
-        {/* Who We Are */}
         <section className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
             <h2 className="text-2xl md:text-3xl font-semibold text-cyan-300">
@@ -40,14 +37,12 @@ export default function About() {
           </div>
         </section>
 
-        {/* What We Do */}
         <section className="space-y-8">
           <h2 className="text-2xl md:text-3xl font-semibold text-center text-cyan-300">
             What We Do
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Card 1 */}
             <div className="bg-[#1F2937] p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition duration-300 shadow-md">
               <div className="text-4xl mb-4"><TrendingUp /></div>
               <h3 className="text-xl font-semibold mb-2 text-white">Prop Firm Access</h3>
@@ -56,7 +51,6 @@ export default function About() {
               </p>
             </div>
 
-            {/* Card 2 */}
             <div className="bg-[#1F2937] p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition duration-300 shadow-md">
               <div className="text-4xl mb-4"><Headphones /></div>
               <h3 className="text-xl font-semibold mb-2 text-white">Oraimo Gadgets</h3>
@@ -65,7 +59,6 @@ export default function About() {
               </p>
             </div>
 
-            {/* Card 3 */}
             <div className="bg-[#1F2937] p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition duration-300 shadow-md">
               <div className="text-4xl mb-4"><MessageCircle /></div>
               <h3 className="text-xl font-semibold mb-2 text-white">Support & Discounts</h3>
@@ -76,7 +69,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* Closing */}
         <section className="text-center pt-12">
           <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
             Whether you're taking your first step into the trading world or searching for affordable tech, PropLite is built to help you succeed. Let’s grow together.

@@ -9,9 +9,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
         
         <div className="flex flex-col items-center md:items-start gap-3 text-center md:text-left">
-          <div className="text-white text-lg font-bold tracking-wide">
-            PropLite
-          </div>
+			<Link to="/">
+				<div className="text-white text-lg font-bold tracking-wide">
+					PropLite
+				</div>
+			</Link>
           <div className="text-sm">
           Copyright  &copy; {new Date().getFullYear()} PropLite Future Trades. All rights reserved.
           </div>

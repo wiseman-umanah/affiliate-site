@@ -4,7 +4,7 @@ export default function Privacy() {
   return (
     <main className="bg-gradient-to-b from-black via-gray-900 to-black text-white py-16 px-4">
       <div className="max-w-3xl mx-auto space-y-10">
-        {/* Heading */}
+
         <div className="flex items-center gap-3">
           <div className="bg-cyan-500/10 p-3 rounded-full">
             <Shield className="text-[#2563EB]"/>
@@ -14,12 +14,10 @@ export default function Privacy() {
           </h1>
         </div>
 
-        {/* Intro */}
         <p className="text-gray-300 text-lg leading-relaxed">
           At <span className="font-semibold text-white">PropLite</span>, your privacy matters. Below is an overview of how we handle your data with care and transparency.
         </p>
 
-        {/* Policy Points */}
         <div className="grid gap-6">
           {[
             {
@@ -48,8 +46,7 @@ export default function Privacy() {
             </div>
           ))}
         </div>
-
-        {/* Closing */}
+		
         <p className="text-gray-300 text-lg leading-relaxed mt-8">
           If you reach out to us, your details are kept strictly confidential and used only to respond to your inquiry. 
           <br />

@@ -15,21 +15,21 @@ const tradingFirms = [
 	faviconDomain: "oraimo.com",
   description: `How To Use Oraimo NG Discount Code
 
-Save big on your favorite Oraimo products with our exclusive discount codes. Follow these simple steps to redeem your code:
-Visit the Oraimo Store
-Click here to shop directly on the official Oraimo store.
-Select Your Products
-Browse through the wide range of Oraimo accessories, including earbuds, power banks, smartwatches, and more. Add your favorite items to the shopping cart.
-Go to Checkout
-Once you’re ready, proceed to the checkout page by clicking the cart icon.
-Look for the field labeled “enter discount Code”
-Enter the relevant discount code from Online Discount Network.
+			Save big on your favorite Oraimo products with our exclusive discount codes. Follow these simple steps to redeem your code:
+			Visit the Oraimo Store
+			Click here to shop directly on the official Oraimo store.
+			Select Your Products
+			Browse through the wide range of Oraimo accessories, including earbuds, power banks, smartwatches, and more. Add your favorite items to the shopping cart.
+			Go to Checkout
+			Once you’re ready, proceed to the checkout page by clicking the cart icon.
+			Look for the field labeled “enter discount Code”
+			Enter the relevant discount code from Online Discount Network.
 
-Click “Apply” to validate the coupon
-The discount should be reflected in your order total.
-Proceed to payment online or at delivery and Complete Your Purchase:
+			Click “Apply” to validate the coupon
+			The discount should be reflected in your order total.
+			Proceed to payment online or at delivery and Complete Your Purchase:
 
-Congratulations! You’ve successfully used an Oraimo discount code.`
+			Congratulations! You’ve successfully used an Oraimo discount code.`
   },
   {
     name: "FundedNext",
@@ -107,8 +107,6 @@ function Home() {
 			<CreditCard className="w-6 h-6 text-cyan-300" />
 			<h3 className="text-xl lg:text-2xl font-semibold text-gray-300">Proprietary Trading Firms</h3>
 			</div>
-
-			{/* Trading Firms Grid */}
 			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
 			{filteredFirms.map((firm, idx) => (
 				<FirmCard key={idx} firm={firm} />

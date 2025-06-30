@@ -1,49 +1,66 @@
 export default function Terms() {
   return (
-    <main className="bg-black text-white py-16 px-4">
-      <div className="max-w-3xl mx-auto">
-        {/* Heading */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-cyan-400">
-          📃 Terms of Use
-        </h1>
+    <main className="bg-gradient-to-br from-[#0f172a] to-[#020617] text-white py-20 px-4">
+      <div className="max-w-4xl mx-auto">
+        <section className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 animate-fade-in">
+        	Terms of Use
+          </h1>
+          <p className="text-gray-400 mt-4 text-lg max-w-xl mx-auto leading-relaxed">
+            Welcome to Proplite. By accessing our platform, you agree to the terms below. Please read them carefully.
+          </p>
+        </section>
 
-        {/* Introduction */}
-        <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-          By using this website, you agree to the following terms:
-        </p>
+        <section className="bg-[#1e293b] border border-blue-900/50 rounded-2xl shadow-xl px-6 py-8 space-y-8 backdrop-blur-sm">
+          <div className="flex items-start gap-4">
+            <div>
+              <h3 className="text-white font-semibold text-lg mb-1">Affiliate Disclosure</h3>
+              <p className="text-gray-300 text-sm">
+                Some links are affiliate links. We may earn a commission if you purchase through them, at no additional cost to you.
+              </p>
+            </div>
+          </div>
 
-        {/* Terms List */}
-        <ul className="space-y-6">
-          <li className="flex items-start gap-3">
-            <span className="text-cyan-400 text-xl">🔗</span>
-            <p className="text-gray-300">
-              <strong>Affiliate Disclosure:</strong> All links on this site are affiliate links. When you click and make a purchase or register, we may earn a commission at no extra cost to you.
-            </p>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-cyan-400 text-xl">💡</span>
-            <p className="text-gray-300">
-              <strong>No Financial Advice:</strong> We do not provide financial, investment, or trading advice. Always do your own research before signing up for any prop firm.
-            </p>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-cyan-400 text-xl">🌐</span>
-            <p className="text-gray-300">
-              <strong>External Websites:</strong> We are not responsible for the content, actions, or services of third-party websites we link to.
-            </p>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-cyan-400 text-xl">📝</span>
-            <p className="text-gray-300">
-              <strong>Content Accuracy:</strong> While we do our best to keep information up-to-date, we do not guarantee accuracy or completeness.
-            </p>
-          </li>
-        </ul>
+          <div className="flex items-start gap-4">
+            <div>
+              <h3 className="text-white font-semibold text-lg mb-1">No Financial Advice</h3>
+              <p className="text-gray-300 text-sm">
+                All content on this site is for informational purposes only. We do not offer financial or trading advice.
+              </p>
+            </div>
+          </div>
 
-        {/* Closing */}
-        <p className="text-gray-300 text-lg mt-10 leading-relaxed">
-          Your use of this site means you accept these terms.
-        </p>
+          <div className="flex items-start gap-4">
+            <div>
+              <h3 className="text-white font-semibold text-lg mb-1">External Sites</h3>
+              <p className="text-gray-300 text-sm">
+                We are not responsible for third-party content, actions, or privacy practices on sites we link to.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <div>
+              <h3 className="text-white font-semibold text-lg mb-1">Accuracy of Information</h3>
+              <p className="text-gray-300 text-sm">
+                We strive to keep our content accurate and updated, but we do not guarantee completeness or correctness.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="text-center mt-12">
+          <p className="text-gray-400 text-base">
+            Questions or feedback about these terms?{" "}
+            <a
+              href="/contact"
+              className="text-cyan-400 hover:text-cyan-300 underline transition"
+            >
+              Contact us
+            </a>{" "}
+            — we’re always here to help.
+          </p>
+        </div>
       </div>
     </main>
   );

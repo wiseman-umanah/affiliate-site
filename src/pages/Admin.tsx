@@ -30,14 +30,10 @@ export default function AdminDashboard() {
   return (
     <main className="bg-black text-white min-h-screen py-8">
       <div className="max-w-4xl mx-auto space-y-12">
-        {/* Heading */}
         <h1 className="text-3xl md:text-4xl font-bold text-cyan-400">🔧 Admin Dashboard</h1>
-
-        {/* Manage Links */}
         <section>
           <h2 className="text-xl font-semibold mb-4">Manage Affiliate Links</h2>
 
-          {/* Existing Links */}
           <div className="space-y-3 mb-6">
             {links.map((link) => (
               <div
@@ -65,7 +61,6 @@ export default function AdminDashboard() {
             ))}
           </div>
 
-          {/* Add New Link */}
           <div className="flex flex-col md:flex-row gap-4">
             <input
               type="text"
