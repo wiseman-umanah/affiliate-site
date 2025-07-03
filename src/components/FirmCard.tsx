@@ -1,21 +1,40 @@
 import { useState } from "react";
-import { Star } from "lucide-react";
-import { FirmModal } from "./FirmModal";
+import { Star, Pencil } from "lucide-react";
+import { FirmModal, Firm } from "./FirmModal";
+import { databases } from "../lib/appwrite";
 
-interface Firm {
-  name: string;
-  tagline: string;
-  description?: string;
-  rating: number;
-  minDeposit?: number;
-  profitSplit?: number;
-  discountCode?: string;
-  websiteUrl: string;
-  faviconDomain: string;
-}
-
-export function FirmCard({ firm }: { firm: Firm }) {
+export function FirmCard({
+  firm,
+  mode = "view",
+  onDelete,
+  onUpdated,
+}: {
+  firm: Firm;
+  mode?: "view" | "edit";
+  onDelete?: () => void;
+  onUpdated?: () => void;
+}) {
   const [showModal, setShowModal] = useState(false);
+
+  const getUpdatableFields = async (firm: Firm)  => {
+	const { $id, ...rest } = firm;
+	return Object.fromEntries(Object.entries(rest).filter(([k]) => !k.startsWith("$")));
+	}
+
+  const handleSave = async (updated: Firm) => {
+    const santUpdate = await getUpdatableFields(updated);
+    try {
+      await databases.updateDocument(
+        import.meta.env.VITE_APPWRITE_DB_ID!,
+        import.meta.env.VITE_APPWRITE_COL_ID!,
+        firm.$id,
+        santUpdate
+      );
+      if (onUpdated) onUpdated();
+    } catch (error) {
+      console.error("Update failed:", error);
+    }
+  };
 
   return (
     <>
@@ -41,15 +60,33 @@ export function FirmCard({ firm }: { firm: Firm }) {
           <p className="text-gray-400 text-sm">{firm.tagline}</p>
         </div>
 
-        <button
-          onClick={() => setShowModal(true)}
-          className="w-full bg-[#2563EB] hover:bg-cyan-300 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300"
-        >
-          See More
-        </button>
+        {mode === "edit" ? (
+          <button
+            onClick={() => setShowModal(true)}
+            className="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-semibold py-3 px-4 rounded-lg transition flex items-center justify-center gap-2"
+          >
+            <Pencil className="w-4 h-4" />
+            Edit
+          </button>
+        ) : (
+          <button
+            onClick={() => setShowModal(true)}
+            className="w-full bg-[#2563EB] hover:bg-cyan-300 text-white font-semibold py-3 px-4 rounded-lg transition"
+          >
+            See More
+          </button>
+        )}
       </div>
 
-      {showModal && <FirmModal firm={firm} onClose={() => setShowModal(false)} />}
+      {showModal && (
+        <FirmModal
+          firm={firm}
+          mode={mode}
+          onClose={() => setShowModal(false)}
+          onSave={handleSave}
+          onDelete={onDelete}
+        />
+      )}
     </>
   );
 }

@@ -4,7 +4,7 @@ import { TrendingUp, Headphones, MessageCircle, Rocket } from "lucide-react";
 
 export default function About() {
   return (
-    <main className="bg-gradient-to-b from-black via-[#0c1524] to-black text-white px-6 py-20 min-h-screen">
+    <main className="bg-gradient-to-b from-black via-[#0c1524] to-black text-white px-8 py-20 min-h-screen">
       <div className="max-w-5xl mx-auto space-y-16">
         <section className="text-center space-y-4 animate-fade-in">
           <h1 className="text-4xl md:text-6xl font-bold">

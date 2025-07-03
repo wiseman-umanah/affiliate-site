@@ -1,6 +1,6 @@
 export default function Terms() {
   return (
-    <main className="bg-gradient-to-br from-[#0f172a] to-[#020617] text-white py-20 px-4">
+    <main className="bg-gradient-to-br from-[#0f172a] to-[#020617] text-white py-20 px-8">
       <div className="max-w-4xl mx-auto">
         <section className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 animate-fade-in">

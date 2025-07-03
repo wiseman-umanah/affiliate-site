@@ -2,7 +2,7 @@ import { CircleCheck, ChartCandlestick, Shield, Lock, Link } from "lucide-react"
 
 export default function Privacy() {
   return (
-    <main className="bg-gradient-to-b from-black via-gray-900 to-black text-white py-16 px-4">
+    <main className="bg-gradient-to-b from-black via-gray-900 to-black text-white py-16 px-8">
       <div className="max-w-3xl mx-auto space-y-10">
 
         <div className="flex items-center gap-3">
