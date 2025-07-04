@@ -57,10 +57,7 @@ function Home() {
           <span className="text-cyan-300">Oraimo Discount </span>Deals
         </h2>
         <p className="text-gray-300 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-          Compare top proprietary trading firms with exclusive discounts — and
-          get access to premium Oraimo accessories to power your lifestyle on
-          and off the charts. All offers available only through our affiliate
-          links.
+          Compare top proprietary trading firms and shop quality Oraimo products, all with exclusive deals and discount prices
         </p>
       </div>
 
